@@ -1,0 +1,37 @@
+# Example ACM Policy Configuration File
+
+policyName: deploy-nfd-crd-policy
+namespace: day2
+remediationAction: enforce
+
+# Optional: Compliance type (musthave or mustnothave)
+# complianceType: musthave
+
+# List of YAML files to include in the policy
+files:
+  - nfd-operator-crd/node-feature-discovery.yaml
+  # Add more files as needed:
+  # - path/to/another-file.yaml
+
+# Option 1: Use cluster selectors (requires PlacementBinding)
+# clusterSelectors:
+#   environment: test
+#   region: local
+#   cluster-type: worker
+#   # Add more selectors as needed
+
+# Option 2: Use cluster sets
+clusterSets:
+  - site1
+  # Add more cluster sets as needed:
+  # - site2
+  # - production
+
+# Optional: Custom output directory name
+# If not specified, defaults to: acm-policy-<policyName>
+# outputDir: my-custom-output-dir
+
+# Optional: Create base/overlays structure (GitOps-friendly)
+# Set to true to create a base/overlays directory structure
+# useBaseOverlays: false
+
