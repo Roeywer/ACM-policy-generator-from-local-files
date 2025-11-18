@@ -38,10 +38,7 @@ oc apply -f acm-policy-<name>-policy/processed-resources.yaml
 # 1. Generate and process
 ./generate-acm-policy.sh -c generate-config.yaml
 
-# 2. Apply (using helper script)
-./apply-policy.sh acm-policy-chrony-policy
-
-# OR apply manually
+# 2. Apply manually
 oc apply -f acm-policy-chrony-policy/processed-resources.yaml
 
 # 3. Verify
