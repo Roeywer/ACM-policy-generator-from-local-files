@@ -32,7 +32,7 @@ oc apply -f acm-policy-<name>-policy/processed-resources.yaml
    - **PlacementBinding**: Links the Policy to the Placement (always included)
 3. You apply the processed resources directly to your cluster
 
-## Complete generate
+## Complete Example
 
 ```bash
 # 1. Generate and process
